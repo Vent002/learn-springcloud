@@ -1,0 +1,5 @@
+cn\hsmxg1204\config\RestTemplateConfig.class
+cn\hsmxg1204\entity\TxLog.class
+cn\hsmxg1204\entity\Order.class
+cn\hsmxg1204\entity\Product.class
+cn\hsmxg1204\entity\User.class

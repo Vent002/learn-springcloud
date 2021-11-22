@@ -1,0 +1,43 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: service-product
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        namespace: dev
+      config:
+        server-addr: 127.0.0.1:8848
+        namespace: dev
+        name: produce
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.100.78.168:3306/test-sql?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=true
+    username: hsmxg
+    password: hsmxg1204.
+#  jpa:
+#    properties:
+#      hibernate:
+#        hbm2ddl:
+#          auto: update
+#        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+
+  #rocketmq:
+  #  name-server: 192.168.109.131:9876
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true #开启驼峰转换
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+logging:
+  file:
+    max-history: 7
+    max-size: 2MB
+    name: E:/SpringBootLearing/test_logs/login.log
+
+  level:
+    cn.hsmxg1204.test: info
